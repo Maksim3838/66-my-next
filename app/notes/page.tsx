@@ -10,7 +10,7 @@ async function Notes() {
   const queryClient = new QueryClient();
   await queryClient.prefetchQuery({
     queryKey: ["notes", "", 1],
-    queryFn: () => fetchNotes("", 1),
+   queryFn: () => fetchNotes(1, ""),
   });
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>
