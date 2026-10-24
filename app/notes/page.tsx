@@ -17,6 +17,6 @@ async function Notes() {
       <NotesClient />
     </HydrationBoundary>
   );
-}
+};
 
 export default Notes;
