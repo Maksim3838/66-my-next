@@ -22,7 +22,7 @@ function NotesClient() {
 
   const { data } = useQuery({
     queryKey: ["notes", debouncedQuery, page],
-    queryFn: () => fetchNotes(debouncedQuery, page),
+    queryFn: () => fetchNotes(page, debouncedQuery),
     placeholderData: keepPreviousData,
     refetchOnMount: false,
   });
